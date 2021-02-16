@@ -13,6 +13,8 @@ Create nel diagramma anche le altre entitá e definite per ciascuna le rispettiv
 
 include __DIR__ . '/classes/User.php';
 include __DIR__ . '/classes/Admin.php';
+include __DIR__ . '/classes/Author.php';
+
 
 $users = [
     new User("Salvo", "Ab", "mail@mail.com", "salvoab","psw"),
@@ -22,6 +24,11 @@ $users = [
 ];
 
 $admin = new Admin("Alfio", "Alano", "alfio@mail.com", "alfio","psw4", 5);
+
+$authors = [
+    new User("Peppino", "Di Capri", "pepca@mail.com", "pepca","psw6", 6),
+    new User("Marcello", "Marzotto", "mms@mail.com", "m&ms","psw7", 7)
+];
 ?>
 
 <!DOCTYPE html>
@@ -51,11 +58,11 @@ $admin = new Admin("Alfio", "Alano", "alfio@mail.com", "alfio","psw4", 5);
     <div class="lista-utenti">
         <?php foreach($users as $user) { ?>
             <div class="user">
-                <h4> <?php echo $user->getName(); ?></h4>
-                <h4> <?php echo $user->getLastName(); ?></h4>
-                <h4> <?php echo $user->getEmail(); ?></h4>
-                <h4> <?php echo $user->getUsername(); ?></h4>
-                <h4> <?php echo $user->getPassword(); ?></h4>
+                <h4> Nome: <?php echo $user->getName(); ?></h4>
+                <h4> Cognome: <?php echo $user->getLastName(); ?></h4>
+                <h4> Email: <?php echo $user->getEmail(); ?></h4>
+                <h4> Username: <?php echo $user->getUsername(); ?></h4>
+                <h4> Password: <?php echo $user->getPassword(); ?></h4>
             </div>
         <?php } ?>
     </div>
@@ -63,13 +70,25 @@ $admin = new Admin("Alfio", "Alano", "alfio@mail.com", "alfio","psw4", 5);
     <h2>Utente amministratore</h2>
     <div class="lista-utenti">
             <div class="user">
-            <h4> <?php echo $admin->getName(); ?></h4>
-                <h4> <?php echo $admin->getLastName(); ?></h4>
-                <h4> <?php echo $admin->getEmail(); ?></h4>
-                <h4> <?php echo $admin->getUsername(); ?></h4>
-                <h4> <?php echo $admin->getPassword(); ?></h4>
+                <h4> Nome: <?php echo $admin->getName(); ?></h4>
+                <h4> Cognome: <?php echo $admin->getLastName(); ?></h4>
+                <h4> Email: <?php echo $admin->getEmail(); ?></h4>
+                <h4> Username: <?php echo $admin->getUsername(); ?></h4>
+                <h4> Password: <?php echo $admin->getPassword(); ?></h4>
             </div>
     </div>
 
+    <h2>Elenco utenti autori</h2>
+    <div class="lista-utenti">
+        <?php foreach($authors as $author) { ?>
+            <div class="user">
+                <h4> Nome: <?php echo $author->getName(); ?></h4>
+                <h4> Cognome: <?php echo $author->getLastName(); ?></h4>
+                <h4> Email: <?php echo $author->getEmail(); ?></h4>
+                <h4> Username: <?php echo $author->getUsername(); ?></h4>
+                <h4> Password: <?php echo $author->getPassword(); ?></h4>
+            </div>
+        <?php } ?>
+    </div>
 </body>
 </html>

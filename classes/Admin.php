@@ -16,7 +16,7 @@ class Admin extends User{
     public function __construct(string $name, string $lastName, string $email, string $username, string $password, int $userID) {
         parent::__construct($name, $lastName, $email, $username, $password);
         
-        // Simulazione di un Autoincrement del database con una variabile statica e privata della classe User
+        // Simulazione di un Autoincrement del database con una variabile statica e privata della classe Admin
         $this->id = Admin::$counter + 1;
         Admin::$counter++;
 
