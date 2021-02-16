@@ -44,7 +44,7 @@ class Comment {
     }
 
     // Setter
-    public function setTitle(string $body)
+    public function setBody(string $body)
     {
         $this->body = $body;
     }
