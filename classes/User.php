@@ -27,6 +27,10 @@ class User {
         $this->password = $password;
     }
 
+    /**
+     * Restituisce lo username
+     * @return string 
+    */
     public function getUsername()
     {
         return $this->username;
@@ -52,8 +56,46 @@ class User {
 
         return "Username NON modificato";
     }
+
+    /**
+     * Restituisce il nome dell'utente
+     * @return string 
+    */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Restituisce il cognome dell'utente
+     * @return string 
+    */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * Restituisce la mail dell'utente
+     * @return string 
+    */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Restituisce la password dell'utente
+     * Metodo getter solo a scopo dimostrativo dell'esercizio
+     * @return string 
+    */
+    public function getPassword()
+    {
+        return $this->password;
+    }
 }
 
+/*
 $test1 = new User("Salvo", "AB", "mail@mail.com", "salvoab","psw");
 $test2 = new User("Salvo2", "AB2", "mail2@mail.com", "salvoab2","psw2");
 // test modifica username riuscita
@@ -64,3 +106,4 @@ echo $test2->setUsername("salvoab2", "psw", "sab3");
 echo "\n";
 
 var_dump($test1, $test2);
+*/
