@@ -12,6 +12,7 @@ Create nel diagramma anche le altre entitá e definite per ciascuna le rispettiv
 */
 
 include __DIR__ . '/classes/User.php';
+include __DIR__ . '/classes/Admin.php';
 
 $users = [
     new User("Salvo", "Ab", "mail@mail.com", "salvoab","psw"),
@@ -20,6 +21,7 @@ $users = [
     new User("Franco", "Gialli", "frank@mail.com", "frank","psw3")
 ];
 
+$admin = new Admin("Alfio", "Alano", "alfio@mail.com", "alfio","psw4", 5);
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +47,7 @@ $users = [
     
     <h1>Elenco utenti</h1>
 
+    <h2>Elenco utenti visualizzatori</h2>
     <div class="lista-utenti">
         <?php foreach($users as $user) { ?>
             <div class="user">
@@ -55,6 +58,17 @@ $users = [
                 <h4> <?php echo $user->getPassword(); ?></h4>
             </div>
         <?php } ?>
+    </div>
+
+    <h2>Utente amministratore</h2>
+    <div class="lista-utenti">
+            <div class="user">
+            <h4> <?php echo $admin->getName(); ?></h4>
+                <h4> <?php echo $admin->getLastName(); ?></h4>
+                <h4> <?php echo $admin->getEmail(); ?></h4>
+                <h4> <?php echo $admin->getUsername(); ?></h4>
+                <h4> <?php echo $admin->getPassword(); ?></h4>
+            </div>
     </div>
 
 </body>

@@ -42,7 +42,8 @@ class Admin extends User{
     }
 }
 
+/*
 $testAdmin = new Admin("Franco", "Gialli", "frank@mail.com", "frank","psw3", 4);
 $testAdmin2 = new Admin("Franco2", "Gialli2", "frank2@mail.com", "frank2","psw32", 3);
 
-var_dump($testAdmin, $testAdmin2);
+var_dump($testAdmin, $testAdmin2);*/
